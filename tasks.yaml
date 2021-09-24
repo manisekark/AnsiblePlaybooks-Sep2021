@@ -1,0 +1,9 @@
+--- #This is for task playbook
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          - name: Installing httpd on webservers
+            action: yum name=htt state=installed
+            ignore_errors: yes

@@ -1,0 +1,5 @@
+--- #This is target section
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh

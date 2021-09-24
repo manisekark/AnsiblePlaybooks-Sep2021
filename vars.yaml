@@ -1,0 +1,11 @@
+--- #This is variable
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  vars:
+          pkgname: httpd
+
+  tasks:
+          - name: Installing httpd on webservers
+            action: yum pkg='{{pkgname}}' state=present

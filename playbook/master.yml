@@ -1,0 +1,8 @@
+--- #This is ansible roles
+- hosts: webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  roles:
+          - testrole
+
